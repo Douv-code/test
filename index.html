@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang=FR>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style>
+		body { 
+			width: 500px;
+			margin: 0 auto;
+			padding: 20px 20px;
+			background-color: white;
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
+		header {
+			text-align: center;
+		}
+		main { 
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 0px;
+		}
+		p { 
+			font-size: 11px;
+			color: black;
+			text-align:left;
+		}
+		h1 { 
+			font-size: 40px;
+		}
+		h2 { 
+			font-size: 28px;
+		}
+		footer { 
+			font-family: Arial, Helvetica, sans-serif;
+			color: black;
+			font-size: 15px;
+			font-style: italic;
+			text-align:left;
+		}
+		time { 
+			font-family: Arial, Helvetica, sans-serif;
+			color: blue;
+			font-size: 18px;
+		}
+		figure {
+			text-align: center;
+		}
+		
+		figcaption{
+		font-size:20px;
+		}
+		/* (A) NAVIGATION BAR */
+.ddmenu { display: flex; }
+ 
+/* (B) FIRST LEVEL ITEMS */
+.ddmenu a, .ddmenu .ddgroup {
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  background: #585858;
+}
+.ddmenu a:hover, .ddmenu .ddgroup:hover {
+  color: #ffe945;
+  background: #3a3a3a;
+  cursor: pointer;
+}
+		
+		
+		.ddmenu .ddgroup { position: relative; }
+.ddsub {
+  width: 100%;
+  position: absolute;
+  top: 100%; left: 0;
+  display: none;
+}
+.ddsub a { 
+  display: block; 
+  box-sizing: border-box;
+}
+.ddgroup:hover .ddsub { display: block; }
+
+
+
+/* (D) DROPDOWN ARROW */
+.ddgroup::after {
+  content: "\27A4";
+  position: absolute;
+  top: 13px; right: 10px;
+  transition: transform 0.2s;
+}
+.ddgroup:hover::after {
+  transform: rotate(90deg);
+}
+
+/* (E) ON SMALL SCREENS */
+@media screen and (max-width: 640px) {
+  .ddmenu { flex-wrap: wrap; }
+  .ddsub {
+    position: static;
+    margin-top: 10px;
+  }
+  
+  
+}
+	</style>
+</head>
+<body>
+	<header>
+	
+	<nav class="ddmenu">
+  <!-- (A) "NORMAL ITEMS" -->
+  <a href="#">Menu A</a>
+  <a href="#">Menu B</a>
+  <a href="#">Menu C</a>
+ 
+  <!-- (B) DROPDOWN GROUP -->
+  <div class="ddgroup">
+    Menu D
+    <div class="ddsub">
+      <a href="#">Sub Menu A</a>
+      <a href="#">Sub Menu B</a>
+    </div>
+  </div>
+</nav>
+	
+	
+		<h1>Loup arctique</h1>
+		<h2>Canis lupus arctos</h2>
+		<time>10 septembre 2018</time>
+	</header>
+	<main>
+		<p>Le loup arctique (Canis lupus arctos) est une sous-espèce de la famille des 
+		canidés, de l'espèce Canis lupus qui comprend les loups et les chiens. </p>
+		<figure>
+			<img src="louparctique.jpg" width="350px" width="350px" alt="loupblanc" title="louparctique" />
+			
+			<figcaption>Loup arctique</figcaption>
+		</figure>
+		<p>Le loup arctique habite la partie septentrionale de l'Amérique du Nord. 
+		La sous-espèce orientale équivalente est le <mark>Loup de Sibérie</mark> (Canis lupus albus).</.....>
+	</p>	
+	<br>
+		<footer>Dernière mise à jour le 10 septembre 2018.</footer>
+	</main>
+</body>
+</html>
